@@ -11,5 +11,5 @@ export default function App() {
     <div id="root" style={{height : "100vh",  flex: '1' }} >
       <OHIF/>
       </div>
-  )
+  )   
 }
