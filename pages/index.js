@@ -1,15 +1,16 @@
-
-// import Ohif from 'module/Ohif'
+import Link from 'next/link'
 import React from 'react'
-import dynamic from 'next/dynamic'
-const OHIF  = dynamic(()=> import( 'module/Viewer'),{ssr:false});
 
-export default function App() {
+
+function Home() {
   return (
-   
-
-    <div id="root" style={{height : "100vh",  flex: '1' }} >
-      <OHIF/>
-      </div>
-  )   
+    <Link 
+    href={{
+        pathname: '/viewer/dicomjson',
+        query: "url=https://ohif-dicom-json-example.s3.amazonaws.com/LIDC-IDRI-0001.json",
+      }}
+    > OHIF Viewer</Link>
+  )
 }
+
+export default Home
